@@ -23,7 +23,7 @@
 module two_stage_coding(
 input logic clk,rst,
 input logic a,b,
-output logic y
+output logic y0,y1
     );
 typedef enum {s0,s1,s2} state_type;   
 //signal declaration
@@ -42,7 +42,11 @@ end
 //[2] next state logic
 
 always_comb 
+
 begin 
+    y0 = 1'b0;
+    y1 = 1'b0;
+    state_next = s0;
 case(state_reg)
 s0:
 begin
