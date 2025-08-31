@@ -21,9 +21,10 @@
 
 
 module tb_debnc_det( );
-logic clk,rst,sw,db;
+logic clk,rst,sw,db_delay,db_early;
 localparam T = 20;
-debnc_det uut(clk,rst,sw,db);
+debnc_det uut(clk,rst,sw,db_delay);
+early_debnc uut1(clk,rst,sw,db_early);
 always 
 begin
 clk = 0;
@@ -42,7 +43,6 @@ end
 initial 
 begin
 sw=0;
- repeat(3) @(negedge clk);
  #20;
  sw = 1'b1;
  #20;
