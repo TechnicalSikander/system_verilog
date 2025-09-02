@@ -8,4 +8,7 @@ I am going to do various hardware architecture with the help of system verilog .
 4. FSM (multistage and two stage coding style)
 5. rising Edge Detector
    Mealy and Moore
-6. Debounce ckt with delay and early 
+6. Debounce ckt with delay and early
+7. RAM_LUT
+8. Sync_dual_port_ram
+9. 
