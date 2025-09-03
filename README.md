@@ -11,4 +11,5 @@ I am going to do various hardware architecture with the help of system verilog .
 6. Debounce ckt with delay and early
 7. RAM_LUT
 8. Sync_dual_port_ram
-9. 
+9. ROM (infer as LUT and BRAM)
+10. FIFO
