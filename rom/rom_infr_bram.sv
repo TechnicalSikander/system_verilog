@@ -21,6 +21,7 @@
 
 
 module rom_infr_bram(
+input logic clk,
 input logic [2:0] addr,
 output logic [1:0] data
     );
@@ -28,6 +29,6 @@ output logic [1:0] data
 (*rom_style="block"*)logic [1:0]rom[7:0];
 initial 
 $readmemb("truth_table.mem",rom);
-
-assign data = rom[addr];
+always_ff@(posedge clk)
+ data <= rom[addr];
 endmodule
